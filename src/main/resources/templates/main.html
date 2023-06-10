@@ -5,8 +5,19 @@
     <title>Главная страница</title>
 </head>
 <body>
-<div th:each="el : ${streets}">
-    <h3 th:text="'Id:' + ${el.id} + ' ' + 'Название:' + ${el.streetName}"/>
+<h1>Sell</h1><hr>
+<div th:each="el : ${products}">
+    <h3 th:text="'Id:' + ${el.id} + ' ' + 'Название:' + ${el.title}"/>
 </div>
+<hr>
+<h3>Создать товар:</h3>
+<form action="/product/create" method="post">
+    Название обьявления: <input type="text" name="title" /><br><br>
+    Описание обьявления: <input type="text" name="description" /><br><br>
+    Цена обьявления: <input type="text" name="price" /><br><br>
+    Город обьявления: <input type="text" name="city" /><br><br>
+    Автор обьявления: <input type="text" name="author" /><br><br>
+    <input type="submit" value="Добавить товар" />
+</form>
 </body>
 </html>
