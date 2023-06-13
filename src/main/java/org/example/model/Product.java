@@ -1,24 +1,20 @@
-package org.example.domain;
+package org.example.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-@Entity
-@Table(name = "streets")
 @NoArgsConstructor
 public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String description;
     private double price;
-    private String city;
     private String author;
-
-
+    private Integer pages;
+    private Integer date;
+    private String src;
 }
